@@ -1,0 +1,17 @@
+{% extends 'main/main-layout.html' %}
+{% block main_section %}
+<div class="container mt-5">
+    <center><h1 class="logo">Создание ссылок</h1></center>
+    <form method="POST" class="form-control">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn">Создать ссылку</button>
+    </form>
+    <center><h1 class="logo mt-5">Доступные ссылки</h1></center>
+    <ol class="all-links">
+    {% for link in links %}
+        <li>Ссылка - <a href="{{ link.get_absolute_url }}">{{ link.get_absolute_url }}</a></li>
+    {% endfor %}
+    </ol>
+</div>
+{% endblock main_section %}

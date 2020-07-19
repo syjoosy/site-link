@@ -1,0 +1,11 @@
+{% extends 'main/main-layout.html' %}
+{% block main_section %}
+<div class="container mt-5">
+    <center><h1 class="logo">Авторизация на сайте</h1></center><br>
+    <form method="POST" class="form-control">
+      {% csrf_token %}
+      {{ form }}
+      <button type="submit" class="btn">Войти</button>
+    </form>
+</div>
+{% endblock main_section %}

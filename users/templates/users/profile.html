@@ -1,0 +1,17 @@
+{% extends 'main/main-layout.html' %}
+{% block main_section %}
+<div class="container mt-5">
+  <center><h1 class="logo">Кабинет пользователя</h1></center>
+  <center><br><br><p>
+    <strong>@{{ user.username }}</strong><br>
+    <b>Email:</b> {{ user.email }}<br>
+    <a href="{% url 'exit' %}"><button type="submit" class="btn">Выйти из кабинета</button></a>
+  </p></center>
+  <center><h1 class="logo mt-5">Изменить данные про пользователя</h1></center>
+  <form method="POST" class="form-control">
+    {% csrf_token %}
+    {{ update_user }}
+    <button type="submit" class="btn">Обновить данные</button>
+  </form>
+</div>
+{% endblock main_section %}

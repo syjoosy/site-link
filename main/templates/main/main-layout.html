@@ -1,0 +1,46 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'main/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://ru-static.z-dn.net/files/d6a/0d6695279d8a7a14d9d4b5b5d630751d.jpg">
+                <span>Уберем все лишнее из ссылки!</span>
+            </div>
+            <div class="links">
+                <ul>
+                    <a href="{% url 'home' %}"><li>Главная</li></a>
+                    <a href="{% url 'about' %}"><li>Про нас</li></a>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'profile' %}"><li>Личный кабинет</li></a>
+                    <a href="{% url 'links' %}"><li>Ссылки</li></a>
+                    {% else %}
+                    <a href="{% url 'user' %}"><li>Войти</li></a>
+                    <a href="{% url 'reg' %}"><li>Регистрация</li></a>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </header>
+    {% block main_section %}
+    {% endblock %}
+    <footer class="container">
+        <div class="social">
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-vk"></i>
+            <i class="fab fa-telegram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </footer>
+</body>
+</html>

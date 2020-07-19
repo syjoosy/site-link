@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap&subset=cyrillic-ext');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-weight: 400;
+    background: #fff;
+}
+
+img {max-width: 100%}
+
+a {
+    color: #ff5644;
+    text-decoration: none;
+    transition: all 600ms ease;
+}
+
+a:hover {
+    color: #8bddff;
+    transition: all 600ms ease;
+}
+
+.container {
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 70%;
+}
+
+@media(max-width: 900px) {
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+    }
+}
+header {
+box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+}
+header > .container {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > .container > .logo {
+    display: flex;
+    align-items: center;
+}
+
+header > .container > .logo img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+header > .container > .logo span {
+    width: 200px;
+    font-size: 20px;
+}
+
+header > .container > .links a {
+    color: #757575;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+header > .container > .links a:hover li {
+    text-decoration: underline;
+}
+
+header > .container > .links ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.main h1.logo {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 1px black, 0 0 1em #ccc;
+    font-weight: 600;
+}
+
+p.intro {
+    font-size: 20px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.main p.full-text {
+    font-size: 16px;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+.all-links {
+    margin-left: 30%;
+    width: 60%;
+    margin-top: 30px;
+    display: block;
+}
+
+.all-links li {
+    margin-top: 10px;
+    display: block;
+}
+
+.mt-5 {margin-top: 30px}
+.main .mt {margin-top: 50px}
+.main .center {text-align: center}
+
+.main .link {
+    margin-top: 30px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.main .link b {
+    font-weight: 600;
+    color: #6d706c;
+}
+
+.main .link .big {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.main .link .small a {color: #757575}
+.main .link .small a:hover {text-decoration: underline}
+
+.main .delete-btn {
+    display: block;
+    margin-top: 10px;
+
+    width: 120px;
+    text-align: center;
+    height: 30px;
+    background: #ff5644;
+    border-radius: 5px;
+    border: 0;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 30px;
+    transition: all 600ms ease;
+}
+
+.main .delete-btn:hover {
+    transition: all 600ms ease;
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0px 10px 20px -2px rgba(0,0,0,0.3);
+}
+
+.form-control {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form-control label {
+    margin-top: 15px;
+    display: block;
+}
+
+.form-control input,
+.form-control textarea {
+    width: 100%;
+    background: #fcfcfc;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-control textarea {
+    height: 200px;
+    resize: none;
+}
+
+.form-control ul {
+    margin: 5% 15px;
+    display: block;
+    width: 90%;
+}
+
+.form-control .error {
+    color: #ff5644;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.form-control .hint {
+    color: #6d706c;
+}
+
+.form-control .hint a {color: #61bee8}
+.form-control .hint a:hover {text-decoration: underline}
+
+.btn {
+    margin-left: 0;
+    margin-top: 15px;
+    width: 180px;
+    margin-bottom: 20px;
+    text-align: center;
+    height: 50px;
+    background: #ff5644;
+    border-radius: 5px;
+    border: 0;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 600ms ease;
+}
+
+.btn:hover {
+    transition: all 600ms ease;
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0px 10px 20px -2px rgba(0,0,0,0.3);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer > .social {
+    margin-left: 900px;
+}
+
+footer > .social > i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    background: silver;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #333;
+    transition: all 600ms ease;
+}
+
+footer > .social > i:hover {
+    transition: all 600ms ease;
+    transform: translateY(-5px);
+}

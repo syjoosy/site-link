@@ -1,0 +1,12 @@
+{% extends 'main/main-layout.html' %}
+{% block main_section %}
+<div class="container mt-5">
+    <center><h1 class="logo">Регистрация на сайта</h1></center>
+    <form method="POST" class="form-control">
+      {% csrf_token %}
+      {{ form }}
+      <button type="submit" class="btn btn-outline-warning">Зарегистрироваться</button>
+    </form>
+    <p class="intro">Уже зарегистрированы? <a href="{% url 'user' %}">Войти в личный кабинет</a></p>
+</div>
+{% endblock main_section %}
